@@ -1,0 +1,289 @@
+body {
+  margin: 0;
+  font-family: "OpenSansLight", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  min-width: 320px;
+  line-height: 1.6;
+  font-size: 16px; }
+
+#page-preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 100500; }
+
+#page-preloader .spinner {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 35%;
+  top: 30%;
+  background: url("../img/loading2.gif") no-repeat; }
+
+.header_content {
+  position: relative;
+  opacity: 1;
+  display: block;
+  min-width: 100%;
+  min-height: 77vh;
+  background-color: #ccc;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition-property: opacity;
+  transition-property: opacity; }
+
+.wrapper_box {
+  width: 100vw;
+  height: 77vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../img/2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
+.control_box {
+  width: 20%;
+  position: absolute;
+  bottom: 50px; }
+
+.controls {
+  position: absolute;
+  left: 100px;
+  display: block;
+  z-index: 1;
+  color: #fff; }
+
+.video_box {
+  position: absolute;
+  width: 100%; }
+
+.tubular-play {
+  display: none;
+  margin-left: 10px;
+  cursor: pointer; }
+
+.tubular-pause {
+  display: block;
+  margin-left: 10px;
+  cursor: pointer; }
+
+.mute_unmute {
+  display: inline-block; }
+
+.tubular-mute {
+  display: inline-block;
+  margin-right: 5px;
+  cursor: pointer; }
+
+.volume_up {
+  display: none; }
+
+.volume_off {
+  display: inline-block; }
+
+.play_pause {
+  display: inline-block; }
+
+.header_title {
+  position: absolute;
+  top: 15vh;
+  width: 100%;
+  text-align: center; }
+
+.header_title_line h1 {
+  font-family: "OpenSansLight", sans-serif;
+  color: #fff;
+  font-size: 2em;
+  line-height: 1.125em;
+  font-style: normal;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.9); }
+
+.header_title_line h2 {
+  font-family: "OpenSansRegular", sans-serif;
+  color: #fff;
+  font-size: 0.9375em;
+  line-height: 1.25em;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8); }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  line-height: 60px;
+  text-align: right;
+  z-index: 9999; }
+
+.mainMenu {
+  letter-spacing: normal;
+  padding: 0;
+  margin: 0;
+  float: right;
+  display: block; }
+
+.logo {
+  display: inline-block;
+  float: left; }
+
+.mainMenu li {
+  display: inline-block; }
+
+.mainMenu li a {
+  display: block;
+  font-family: "OpenSansRegular", sans-serif;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  padding: 0 20px;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  font-size: 13px; }
+
+.mainMenu li a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff; }
+
+.header_contact_line {
+  display: block;
+  color: #fff;
+  font-family: "OpenSansItalic", sans-serif;
+  font-size: 1em;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8); }
+
+.follow {
+  display: inline-block; }
+
+.yt_icon {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 2.5em; }
+  .yt_icon a {
+    color: #fff; }
+
+.mainMenu_btn {
+  font-size: 2.1875em;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: #fff; }
+
+.mainMenu_btn:focus {
+  outline: none; }
+
+.mainMenu_custom {
+  letter-spacing: normal;
+  padding: 0;
+  margin: 0;
+  float: right;
+  display: block;
+  width: 100%; }
+
+.mainMenu_custom li {
+  display: block;
+  text-align: center;
+  background-color: #fff; }
+
+.mainMenu_custom li a {
+  display: block;
+  font-family: "OpenSansRegular", sans-serif;
+  text-transform: uppercase;
+  padding: 0 20px;
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  font-size: 0.8125em; }
+
+.mainMenu_custom li a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff; }
+
+.team {
+  background-color: #f8f8f8; }
+  .team h2 {
+    font-family: "OpenSansLight", sans-serif;
+    text-align: center;
+    padding: 3.75em 0; }
+  .team h4 {
+    font-family: "OpenSansLight", sans-serif; }
+  .team p {
+    color: #999999;
+    font-family: "OpenSansItalic", sans-serif; }
+
+.person1, .person2, .person3, .person4 {
+  width: 150px;
+  height: 150px;
+  -webkit-border-radius: 75px;
+          border-radius: 75px;
+  border: 5px solid #ccc;
+  margin: 0 auto;
+  -webkit-transition: all .2s  ease-out;
+  transition: all .2s  ease-out;
+  background-size: cover;
+  overflow: hidden;
+  background-position: center center; }
+  .person1:hover, .person2:hover, .person3:hover, .person4:hover {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+    border: 6px solid #B2B2B2; }
+
+.content_person1, .content_person2, .content_person3, .content_person4 {
+  display: block;
+  text-align: center;
+  line-height: 1.25em;
+  margin: 3.125em auto 3.125em; }
+
+.motto {
+  background-color: #ccc;
+  margin-top: 3.75em; }
+  .motto p {
+    padding: 3.125em 1.25em;
+    text-align: center;
+    color: #fff;
+    font-family: "OpenSansItalic", sans-serif;
+    font-size: 1.0625em; }
+    .motto p span {
+      font-family: "OpenSansRegular", sans-serif;
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: normal;
+      float: right;
+      font-size: 14px;
+      line-height: 2.3125em;
+      padding: 0 3.75em; }
+
+.goals {
+  background-color: #f5f5f5;
+  margin-left: -15px;
+  margin-right: -15px; }
+  .goals h2 {
+    text-align: center;
+    padding: 3.75em 0; }
+    .goals h2 span {
+      font-family: "OpenSansItalic", sans-serif;
+      font-size: 0.875em;
+      padding: 0 0.625em;
+      color: #777; }
+
+.goals_bg {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover; }
+
+.goals_content {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 8.75em 3.75em; }
