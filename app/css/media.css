@@ -15,6 +15,20 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+.goals_content p {
+	font-size: 13px;
+    line-height: 23px;
+	
+}
+..goals_content h4{
+	font-size: 13px;
+    line-height: 23px;
+}
+
+.goals_content{
+	
+	padding: 60px 40px;
+}
 
 .mainMenu{
 	display: none ;

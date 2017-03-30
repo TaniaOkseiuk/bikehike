@@ -4,10 +4,10 @@ $(document).ready(function(){
 //////////////////////////////////////preloader////////////////
 
 $(window).on('load', function () {
-    var $preloader = $('#page-preloader'),
-        $spinner   = $preloader.find('.spinner');
-    $spinner.fadeOut();
-    $preloader.delay(350).fadeOut('slow');
+	var $preloader = $('#page-preloader'),
+		$spinner   = $preloader.find('.spinner');
+	$spinner.fadeOut();
+	$preloader.delay(350).fadeOut('slow');
 });
 //////////////////////////////////////preloader-end////////////////
 
@@ -24,12 +24,12 @@ $(window).on('load', function () {
 
 });
   $(".volume_up").click(function(){
-    $(this).hide();
-    $('.volume_off').show();  
+	$(this).hide();
+	$('.volume_off').show();  
 });
    $(".volume_off").click(function(){
-    $(this).hide();
-    $('.volume_up').show(); 
+	$(this).hide();
+	$('.volume_up').show(); 
 }); 
 
 ///////////////////play-pause-video-end////////
@@ -44,16 +44,17 @@ if ( st>70){
 	$("nav").fadeIn(300).css({"background-color":"#fff", "color":"#ccccccc", "height": "60px","-webkit-transition": "all .7s ", "transition": "all .7s ","border-bottom": "2px solid #f5f5f5"});
 	$(".mainMenu li a").css({"color": "#000000", "text-shadow": "none"});
 	$(".mainMenu_btn").css({"color": "#000000"});
-	    $(".mainMenu li a").hover(
+	$(".mainMenu li a").hover(	
+			   function () {
+				  $(this).css({"color":"#fff"});
+			   }, 
 				
-               function () {
-                  $(this).css({"color":"#fff"});
-               }, 
-				
-               function () {
-                  $(this).css({"color":"#000000"});
-               }
-            );
+			   function () {
+				  $(this).css({"color":"#000"});
+			   }
+			);
+
+
 		
 	
 	}
@@ -62,7 +63,15 @@ if ( st>70){
 		$("nav").css({"background-color":"transparent", "height": "80px", "-webkit-transition": "all .7s ", "transition": "all .7s ", "border-bottom":"none"});
 		$(".mainMenu li a").css({"color": "#fff", "text-shadow": "0px 0px 5px rgba(0, 0, 0, 0.8)"});
 		$(".mainMenu_btn").css({"color": "#fff"});
-		
+			$(".mainMenu li a").hover(	
+			   function () {
+				  $(this).css({"color":"#fff"});
+			   }, 
+				
+			   function () {
+				  $(this).css({"color":"#fff"});
+			   }
+			);
 		
 	}
 
@@ -87,18 +96,48 @@ $(".mainMenu_custom a").click(function(){
 });
 
 $(".mainMenu a, .mainMenu_custom a, .logo a").click(function(e){
-        e.preventDefault();
-        var id = $(this).attr('href');
-        var offset = $(id).offset().top;
-        $('html, body').animate({
-          scrollTop: offset
-        }, 300)
-        
-      });
+		e.preventDefault();
+		var id = $(this).attr('href');
+		var offset = $(id).offset().top;
+		$('html, body').animate({
+		  scrollTop: offset
+		}, 300)
+		
+	  });
 
 /////////////animate menu end//////////
-	
 
+// ///////////slider///////////////////
+
+var width = $('.goal_wrapper').width();
+
+ $('.goal_wrapper>.goals_bg').width(width);
+ $('.goal_wrapper').width(width*$('.goal_wrapper>.goals_bg').length);
+
+ $('.goal_wrapper').css('left',-width);
+ $('.goal_wrapper>.goals_bg:last-child').prependTo('.goal_wrapper');
+
+ function next_slide(){
+ 	$('.goal_wrapper').animate({
+ 		'margin-left':-width
+ 	},500, function(){
+ 		$('.goal_wrapper>.goals_bg:first-child').appendTo('.goal_wrapper');
+ 		$('.goal_wrapper').css('margin-left',0);
+ 	});
+ }
+  function prev_slide(){
+ 	$('.goal_wrapper').animate({
+ 		'margin-left': width
+ 	},500, function(){
+ 		$('.goal_wrapper>.goals_bg:last-child').prependTo('.goal_wrapper');
+ 		$('.goal_wrapper').css('margin-left',0);
+ 	});
+ }
+
+ $('.goals_next_btn').click(next_slide);
+ $('.goals_prev_btn').click(prev_slide);
+ 
+/////////////////////////slider end///////////////////
 	// //Таймер обратного отсчета
 	// //Документация: http://keith-wood.name/countdown.html
 	// //<div class="countdown" date-time="2015-01-07"></div>
