@@ -123,7 +123,7 @@ nav {
   height: 80px;
   line-height: 60px;
   text-align: right;
-  z-index: 9999; }
+  z-index: 999; }
 
 .mainMenu {
   letter-spacing: normal;
@@ -152,7 +152,7 @@ nav {
   font-size: 13px; }
 
 .mainMenu li a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   color: #fff; }
 
 .header_contact_line {
@@ -188,7 +188,9 @@ nav {
   margin: 0;
   float: right;
   display: block;
-  width: 100%; }
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); }
 
 .mainMenu_custom li {
   display: block;
@@ -207,11 +209,11 @@ nav {
   font-size: 0.8125em; }
 
 .mainMenu_custom li a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   color: #fff; }
 
 .team {
-  background-color: #f8f8f8; }
+  background-color: #fff; }
   .team h2 {
     font-family: "RalewayLight", sans-serif;
     letter-spacing: 0.2em;
@@ -248,21 +250,21 @@ nav {
   margin: 3.125em auto 3.125em; }
 
 .motto {
-  background-color: #ccc;
+  background-color: #444;
   margin-top: 3.75em; }
   .motto p {
     padding: 3.125em 1.25em;
     text-align: center;
     color: #fff;
     font-family: "OpenSansItalic", sans-serif;
-    font-size: 1.0625em; }
+    font-size: 1em; }
     .motto p span {
-      font-family: "RalewayRegular", sans-serif;
-      color: #333;
+      font-family: "RalewaySemiBold", sans-serif;
+      color: #999;
       text-transform: uppercase;
       letter-spacing: normal;
       float: right;
-      font-size: 14px;
+      font-size: 0.875em;
       line-height: 2.3125em;
       padding: 0 3.75em; }
 
@@ -270,15 +272,16 @@ nav {
   background-color: #fff;
   position: relative;
   margin-left: -15px;
-  margin-right: -15px; }
+  margin-right: -15px;
+  margin-bottom: 50px; }
   .goals h2 {
     text-align: center;
     padding: 3.125em 0;
     font-family: "RalewayLight", sans-serif;
     letter-spacing: 0.2em; }
     .goals h2 span {
-      font-family: "OpenSansItalic", sans-serif;
-      font-size: 0.875em;
+      font-family: "RalewayThin", sans-serif;
+      font-size: 1.5em;
       padding: 0 0.625em;
       color: #777;
       letter-spacing: normal; }
@@ -312,15 +315,15 @@ nav {
     margin: 0 0 20px;
     font-size: 0.875em;
     line-height: 1.5625em;
-    color: #555;
-    font-family: "RalewayRegular", sans-serif; }
+    color: #333;
+    font-family: "RalewayMedium", sans-serif; }
   .goals_content h4 {
     text-transform: uppercase;
     font-size: 0.875em;
     line-height: 1.5625em;
-    font-family: "RalewayLight", sans-serif; }
+    font-family: "RalewayRegular", sans-serif; }
 
-.goals_corusel_controls {
+.goals_karusel_controls {
   bottom: 1.25em;
   position: absolute;
   width: 100%;
@@ -341,3 +344,64 @@ nav {
 
 .goals_prev_btn {
   padding-left: 40%; }
+
+.gallery {
+  background-color: #444;
+  padding-bottom: 50px; }
+  .gallery h2 {
+    text-align: center;
+    padding: 3.125em 0;
+    font-family: "RalewayLight", sans-serif;
+    letter-spacing: 0.2em;
+    color: #fff; }
+
+.gallery_wrap .col-md-4 {
+  padding: 0; }
+
+.gallery_box {
+  position: relative;
+  overflow: hidden; }
+  .gallery_box:hover .gl_img {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2); }
+  .gallery_box:hover .gallery_content {
+    opacity: 1; }
+  .gallery_box:hover .gallery_content h4 {
+    margin-top: 30%; }
+
+.gl_img {
+  width: 100%;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+.gallery_content {
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+  .gallery_content h4 {
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "RalewaySemiBold", sans-serif;
+    margin-top: -30%;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+  .gallery_content hr {
+    border: 1px solid #000;
+    width: 30%;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+
+.gallery_item_box > a {
+  display: none;
+  outline: none; }
+  .gallery_item_box > a:first-child {
+    display: block; }

@@ -138,6 +138,33 @@ var width = $('.goal_wrapper').width();
  $('.goals_prev_btn').click(prev_slide);
  
 /////////////////////////slider end///////////////////
+	$('.mfp_g').each(function(){
+		$(this).magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-zoom-in',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+		
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, 
+			opener: function(element) {
+				return element.find('img');
+			}
+		
+		}
+
+		
+		});
+	});
 	// //Таймер обратного отсчета
 	// //Документация: http://keith-wood.name/countdown.html
 	// //<div class="countdown" date-time="2015-01-07"></div>

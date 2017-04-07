@@ -54,7 +54,9 @@
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+.goals_karusel_controls{
+	bottom: -40px;
+}
 }
 
 /* Custom, iPhone Retina */
